@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import "./github.css";
+import logo from "../../images/logo.png"
 
 class Github extends Component{
     constructor(){
@@ -23,27 +25,41 @@ class Github extends Component{
     render(){
         const {user, repo} = this.state;
         return <>
+        <div className="container">
 
         <div className = "row">
 
             <div className="col-3">
-            <p>Meu Github  Infos</p>
-            <p>
-                Login: @{user.login}
-            </p>
+                <p>Meu Github  Infos</p>
+            
+                    <div>
+                        <img className="circle-photo rotate" src={user.avatar_url} alt=""></img>
+                        
+                        <img className="circle-photo rotate"src={logo} alt="logo"></img>
+                        
+                            <div>
+                                Login: @{user.login} <br/>
+                                Name: {user.name} <br/>
+                                Company: {user.company} <br/>
+                                Location: {user.location} <br/>
+
+                            </div>
+                    </div>
             </div>
 
             
             <div className="col-9">
             {repo.map(
                 repositorio => 
-                <p>
+                <p className="bg-card">
                     Nome do Repositorio: {repositorio.name}<br/>
                     Descrição: {repositorio.description} <br/>
                     Link do Repositório: <a href={repositorio.html_url}>Clique aqui</a>
                 </p>
             )}
             </div>
+
+        </div>
 
         </div>
         
