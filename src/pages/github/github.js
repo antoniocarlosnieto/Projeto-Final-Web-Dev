@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./github.css";
-import logo from "../../images/logo.png"
+
 
 class Github extends Component{
     constructor(){
@@ -35,8 +35,7 @@ class Github extends Component{
                     <div>
                         <img className="circle-photo rotate" src={user.avatar_url} alt=""></img>
                         
-                        <img className="circle-photo rotate"src={logo} alt="logo"></img>
-                        
+                                          
                             <div>
                                 Login: @{user.login} <br/>
                                 Name: {user.name} <br/>

@@ -1,4 +1,8 @@
 
+.background {
+  background-color: rgb(100, 96, 96)
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -33,3 +37,5 @@
     transform: rotate(360deg);
   }
 }
+
+
